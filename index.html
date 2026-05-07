@@ -1065,12 +1065,12 @@
   <section class="section">
     <div class="section-head">
       <span class="num">/ 07</span>
-      <h2>시공 스케치 (업체 전달용)</h2>
+      <h2>시공 스케치 — 평면 배치도</h2>
       <span class="rule"></span>
     </div>
 
     <p style="font-size:0.92rem; color:var(--ink-soft); margin-bottom:24px; line-height:1.7;">
-      벽면별 전개도 · 프레임 타입 및 선반 규격(W) 기준 배치안<br>
+      위에서 내려다본 평면 배치도 · 프레임 타입 및 선반 규격(W) 기준<br>
       <strong>천장 높이 2,300mm · 깊이 D400 · ㅁ자 코너장 기본 포함</strong>
     </p>
 
@@ -1309,6 +1309,203 @@
       <span class="icon">— 코너 처리 —</span>
       <p><strong>NW 코너</strong>: W800×W600 코너형 (서쪽↔북쪽) · <strong>NE 코너</strong>: W600×W800 코너형 (북쪽↔동쪽) · <strong>SW 코너</strong>: W800×W600 코너형 (서쪽↔남쪽)</p>
       <p>ㅁ자 설치 시 코너장은 <strong>기본 구성</strong> (추가비용 없음). SE 코너는 문 영역이므로 해당 없음.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="num">/ 08</span>
+      <h2>4면 통합 평면 배치도 (Top View)</h2>
+      <span class="rule"></span>
+    </div>
+
+    <p style="font-size:0.92rem; color:var(--ink-soft); margin-bottom:24px; line-height:1.7;">
+      위에서 내려다본 평면도. 각 벽면을 따라 프레임 타입(A/B/D/F)과 선반 규격(W)을 표기합니다.
+    </p>
+
+    <svg viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:700px; background:#faf6ee; border:1px solid var(--rule);">
+      <defs>
+        <pattern id="ph-cab" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+          <rect width="8" height="8" fill="#fde2c4" opacity="0.5"/>
+          <line x1="0" y1="0" x2="0" y2="8" stroke="#c4541f" stroke-width="1"/>
+        </pattern>
+        <pattern id="ph-drawer" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+          <rect width="6" height="6" fill="#d4cab8"/>
+          <line x1="0" y1="0" x2="0" y2="6" stroke="#b87333" stroke-width="0.8"/>
+        </pattern>
+        <pattern id="ph-excl" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+          <rect width="6" height="6" fill="#fff0f0"/>
+          <line x1="0" y1="0" x2="0" y2="6" stroke="#c95757" stroke-width="0.8" opacity="0.5"/>
+        </pattern>
+      </defs>
+
+      <!-- 방 외곽 -->
+      <rect x="120" y="90" width="400" height="480" fill="#faf6ee" stroke="#1c1a17" stroke-width="2.5"/>
+
+      <!-- ═══════ NORTH WALL (top, 2200mm) ═══════ -->
+      <!-- NW 코너 W800×W600 -->
+      <rect x="120" y="90" width="40" height="50" fill="url(#ph-cab)" stroke="#c4541f" stroke-width="1.2"/>
+      <text x="140" y="113" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6" fill="#c4541f" font-weight="600">W800</text>
+      <text x="140" y="124" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6" fill="#c4541f">×W600</text>
+
+      <!-- W600 F형 -->
+      <rect x="160" y="90" width="110" height="50" fill="url(#ph-cab)" stroke="#c4541f" stroke-width="1"/>
+      <text x="215" y="112" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#c4541f" font-weight="600">W600</text>
+      <text x="215" y="125" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#8a8478">F형 5단</text>
+
+      <!-- 창문 PW 900 -->
+      <rect x="270" y="90" width="120" height="50" fill="#d5eaf5" stroke="#6ba8c9" stroke-width="2"/>
+      <text x="330" y="112" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#3d7390" font-weight="600">창문 900</text>
+      <text x="330" y="125" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#3d7390">관통 시공</text>
+
+      <!-- W700 F형 -->
+      <rect x="390" y="90" width="90" height="50" fill="url(#ph-cab)" stroke="#c4541f" stroke-width="1"/>
+      <text x="435" y="112" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#c4541f" font-weight="600">W700</text>
+      <text x="435" y="125" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#8a8478">F형 5단</text>
+
+      <!-- NE 코너 W600×W800 -->
+      <rect x="480" y="90" width="40" height="50" fill="url(#ph-cab)" stroke="#c4541f" stroke-width="1.2"/>
+      <text x="500" y="113" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6" fill="#c4541f" font-weight="600">W600</text>
+      <text x="500" y="124" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6" fill="#c4541f">×W800</text>
+
+      <!-- N 치수선 -->
+      <line x1="120" y1="72" x2="520" y2="72" stroke="#1c1a17" stroke-width="0.6"/>
+      <line x1="120" y1="66" x2="120" y2="78" stroke="#1c1a17" stroke-width="0.6"/>
+      <line x1="520" y1="66" x2="520" y2="78" stroke="#1c1a17" stroke-width="0.6"/>
+      <text x="320" y="66" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#1c1a17" font-weight="500">N · 2,200 mm</text>
+
+      <!-- ═══════ WEST WALL (left, 2900mm) ═══════ -->
+      <!-- W800 D2 #1 -->
+      <rect x="120" y="140" width="50" height="115" fill="url(#ph-drawer)" stroke="#1c1a17" stroke-width="1"/>
+      <text x="145" y="190" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#1c1a17" font-weight="600" transform="rotate(-90 145 190)">W800 D2</text>
+
+      <!-- W800 D2 #2 -->
+      <rect x="120" y="255" width="50" height="115" fill="url(#ph-drawer)" stroke="#1c1a17" stroke-width="1"/>
+      <text x="145" y="305" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#1c1a17" font-weight="600" transform="rotate(-90 145 305)">W800 D2</text>
+
+      <!-- W800 D3 아일랜드 -->
+      <rect x="120" y="370" width="50" height="115" fill="#fde2c4" stroke="#c4541f" stroke-width="1.2"/>
+      <text x="145" y="420" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#c4541f" font-weight="700" transform="rotate(-90 145 420)">W800 D3</text>
+
+      <!-- W500 F형 -->
+      <rect x="120" y="485" width="50" height="85" fill="url(#ph-cab)" stroke="#c4541f" stroke-width="1"/>
+      <text x="145" y="525" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#c4541f" font-weight="600" transform="rotate(-90 145 525)">W500 F</text>
+
+      <!-- W 치수선 -->
+      <line x1="100" y="90" x2="100" y2="570" stroke="#1c1a17" stroke-width="0.6"/>
+      <line x1="94" y1="90" x2="106" y2="90" stroke="#1c1a17" stroke-width="0.6"/>
+      <line x1="94" y1="570" x2="106" y2="570" stroke="#1c1a17" stroke-width="0.6"/>
+      <text x="88" y="330" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#1c1a17" font-weight="500" transform="rotate(-90 88 330)">W · 2,900 mm</text>
+
+      <!-- ═══════ EAST WALL (right, 2000 + 900 excl) ═══════ -->
+      <!-- W800 B형 #1 -->
+      <rect x="470" y="140" width="50" height="115" fill="#e8e2d6" stroke="#b87333" stroke-width="1"/>
+      <text x="495" y="190" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#4a463f" font-weight="600" transform="rotate(90 495 190)">W800 B</text>
+
+      <!-- W800 B형 #2 -->
+      <rect x="470" y="255" width="50" height="115" fill="#e8e2d6" stroke="#b87333" stroke-width="1"/>
+      <text x="495" y="305" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#4a463f" font-weight="600" transform="rotate(90 495 305)">W800 B</text>
+
+      <!-- W400 F형 -->
+      <rect x="470" y="370" width="50" height="60" fill="url(#ph-cab)" stroke="#c4541f" stroke-width="1"/>
+      <text x="495" y="405" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#c4541f" font-weight="600" transform="rotate(90 495 405)">W400 F</text>
+
+      <!-- 제외 영역 -->
+      <rect x="470" y="430" width="50" height="140" fill="url(#ph-excl)" stroke="#c95757" stroke-width="1" stroke-dasharray="3,2"/>
+      <text x="495" y="500" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#c95757" font-weight="500" transform="rotate(90 495 500)">900 제외</text>
+
+      <!-- E 치수선 (시공) -->
+      <line x1="540" y1="90" x2="540" y2="430" stroke="#1c1a17" stroke-width="0.6"/>
+      <line x1="534" y1="90" x2="546" y2="90" stroke="#1c1a17" stroke-width="0.6"/>
+      <line x1="534" y1="430" x2="546" y2="430" stroke="#1c1a17" stroke-width="0.6"/>
+      <text x="556" y="260" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#c4541f" font-weight="500" transform="rotate(90 556 260)">E · 2,000 (시공)</text>
+
+      <!-- E 치수선 (제외) -->
+      <line x1="540" y1="430" x2="540" y2="570" stroke="#8a8478" stroke-width="0.6" stroke-dasharray="3,3"/>
+      <line x1="534" y1="430" x2="546" y2="430" stroke="#8a8478" stroke-width="0.6"/>
+      <line x1="534" y1="570" x2="546" y2="570" stroke="#8a8478" stroke-width="0.6"/>
+      <text x="556" y="500" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#c95757" font-weight="500" transform="rotate(90 556 500)">900 (문열림)</text>
+
+      <!-- ═══════ SOUTH WALL (bottom, 1300 + 900 door) ═══════ -->
+      <!-- SW 코너 W800×W600 -->
+      <rect x="120" y="520" width="40" height="50" fill="url(#ph-cab)" stroke="#c4541f" stroke-width="1.2"/>
+      <text x="140" y="543" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6" fill="#c4541f" font-weight="600">W800</text>
+      <text x="140" y="554" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6" fill="#c4541f">×W600</text>
+
+      <!-- W700 F2형 -->
+      <rect x="160" y="520" width="110" height="50" fill="url(#ph-cab)" stroke="#c4541f" stroke-width="1"/>
+      <text x="215" y="542" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#c4541f" font-weight="600">W700</text>
+      <text x="215" y="556" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#8a8478">F2형 7단</text>
+
+      <!-- W600 F형 -->
+      <rect x="270" y="520" width="90" height="50" fill="url(#ph-cab)" stroke="#c4541f" stroke-width="1"/>
+      <text x="315" y="542" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#c4541f" font-weight="600">W600</text>
+      <text x="315" y="556" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#8a8478">F형 5단</text>
+
+      <!-- 출입문 -->
+      <rect x="360" y="520" width="160" height="50" fill="#fff0f0" stroke="#c95757" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="440" y="542" text-anchor="middle" font-family="IBM Plex Sans KR, sans-serif" font-size="10" fill="#c95757" font-weight="600">출입문 WD 900</text>
+      <text x="440" y="556" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#c95757">→ 동쪽 열림</text>
+
+      <!-- 문 열림 호 -->
+      <path d="M 360 570 L 360 490 A 80 80 0 0 1 440 570 Z" fill="#fde2c4" fill-opacity="0.2" stroke="#c95757" stroke-width="0.8" stroke-dasharray="2,2"/>
+
+      <!-- S 치수선 -->
+      <line x1="120" y1="590" x2="360" y2="590" stroke="#1c1a17" stroke-width="0.6"/>
+      <line x1="120" y1="584" x2="120" y2="596" stroke="#1c1a17" stroke-width="0.6"/>
+      <line x1="360" y1="584" x2="360" y2="596" stroke="#1c1a17" stroke-width="0.6"/>
+      <text x="240" y="608" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#c4541f" font-weight="500">S · 1,300 (시공)</text>
+
+      <line x1="360" y1="590" x2="520" y2="590" stroke="#8a8478" stroke-width="0.6" stroke-dasharray="3,3"/>
+      <line x1="360" y1="584" x2="360" y2="596" stroke="#8a8478" stroke-width="0.6"/>
+      <line x1="520" y1="584" x2="520" y2="596" stroke="#8a8478" stroke-width="0.6"/>
+      <text x="440" y="608" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#c95757">900 (DOOR)</text>
+
+      <!-- ═══════ 중앙 라벨 ═══════ -->
+      <text x="320" y="310" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="20" fill="#8a8478" font-weight="400">팬트리</text>
+      <text x="320" y="335" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#8a8478">깊이 D400 · 천장 H2,300</text>
+
+      <!-- 전열교환기 -->
+      <g transform="translate(200, 115)">
+        <circle cx="0" cy="0" r="8" fill="#faf6ee" stroke="#1c1a17" stroke-width="1"/>
+        <text x="0" y="3" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6" fill="#1c1a17">HEX</text>
+      </g>
+
+      <!-- N 방위 표시 -->
+      <g transform="translate(620, 110)">
+        <circle cx="0" cy="0" r="16" fill="none" stroke="#1c1a17" stroke-width="0.8"/>
+        <text x="0" y="-2" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#1c1a17">N</text>
+        <line x1="0" y1="3" x2="0" y2="12" stroke="#c4541f" stroke-width="1.5"/>
+      </g>
+
+      <!-- 범례 -->
+      <rect x="50" y="635" width="16" height="12" fill="url(#ph-drawer)" stroke="#1c1a17" stroke-width="0.5"/>
+      <text x="72" y="645" font-family="IBM Plex Sans KR, sans-serif" font-size="9" fill="#4a463f">서랍형 (D)</text>
+
+      <rect x="160" y="635" width="16" height="12" fill="url(#ph-cab)" stroke="#c4541f" stroke-width="0.5"/>
+      <text x="182" y="645" font-family="IBM Plex Sans KR, sans-serif" font-size="9" fill="#4a463f">선반 (F)</text>
+
+      <rect x="250" y="635" width="16" height="12" fill="#e8e2d6" stroke="#b87333" stroke-width="0.5"/>
+      <text x="272" y="645" font-family="IBM Plex Sans KR, sans-serif" font-size="9" fill="#4a463f">행거 (A/B)</text>
+
+      <rect x="360" y="635" width="16" height="12" fill="#d5eaf5" stroke="#6ba8c9" stroke-width="0.5"/>
+      <text x="382" y="645" font-family="IBM Plex Sans KR, sans-serif" font-size="9" fill="#4a463f">창문</text>
+
+      <rect x="440" y="635" width="16" height="12" fill="url(#ph-cab)" stroke="#c4541f" stroke-width="1.2"/>
+      <text x="462" y="645" font-family="IBM Plex Sans KR, sans-serif" font-size="9" fill="#4a463f">코너형</text>
+
+      <rect x="530" y="635" width="16" height="12" fill="url(#ph-excl)" stroke="#c95757" stroke-width="0.5"/>
+      <text x="552" y="645" font-family="IBM Plex Sans KR, sans-serif" font-size="9" fill="#4a463f">제외</text>
+
+      <text x="350" y="675" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#8a8478">— PLAN VIEW · TOP DOWN · NTS · 2026.05 —</text>
+    </svg>
+
+    <div class="callout" style="margin-top:24px;">
+      <span class="icon">— 배치 요약 —</span>
+      <p><strong>West (2,900)</strong>: W800 D2 × 2 + W800 D3 × 1 + W500 F × 1</p>
+      <p><strong>North (2,200)</strong>: 코너(W800×W600) + W600 F + 창문900 + W700 F + 코너(W600×W800)</p>
+      <p><strong>East (2,000)</strong>: W800 B × 2 + W400 F × 1 (하부 900 제외)</p>
+      <p><strong>South (1,300)</strong>: 코너(W800×W600) + W700 F2 + W600 F (문 900 제외)</p>
     </div>
   </section>
 
