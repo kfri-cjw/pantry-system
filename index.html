@@ -931,6 +931,56 @@
   <section class="section">
     <div class="section-head">
       <span class="num">/ 05</span>
+      <h2>추가옵션 주문 내역</h2>
+      <span class="rule"></span>
+    </div>
+
+    <table class="dim-table">
+      <thead>
+        <tr>
+          <th>옵션</th>
+          <th>수량</th>
+          <th>단가</th>
+          <th>소계</th>
+          <th>배치</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="wall-name">3단 서랍장</td>
+          <td class="num-cell">2</td>
+          <td class="num-cell-mute">129,000원</td>
+          <td class="num-cell">258,000원</td>
+          <td>서쪽 벽 (West)</td>
+        </tr>
+        <tr>
+          <td class="wall-name">아일랜드장</td>
+          <td class="num-cell">1</td>
+          <td class="num-cell-mute">189,000원</td>
+          <td class="num-cell">189,000원</td>
+          <td>서쪽 벽 (West)</td>
+        </tr>
+        <tr>
+          <td class="wall-name"><strong>추가옵션 합계</strong></td>
+          <td class="num-cell">3</td>
+          <td class="num-cell-mute">—</td>
+          <td class="num-cell"><strong>447,000원</strong></td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout" style="margin-top:24px;">
+      <span class="icon">— 기본 프레임 —</span>
+      <p><strong>프레임 구매수량: 84개</strong> (총 시공 길이 8,400mm ÷ 10)</p>
+      <p>프레임 단가 7,800원 × 84개 = <strong>655,200원</strong></p>
+      <p>프레임 + 추가옵션 합계 = 655,200 + 447,000 = <strong>1,102,200원</strong> (배송비 별도)</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="num">/ 06</span>
       <h2>시공 스케치 (업체 전달용)</h2>
       <span class="rule"></span>
     </div>
@@ -964,16 +1014,19 @@
           <rect x="50" y="110" width="580" height="80" fill="#e8e2d6" stroke="#b87333" stroke-width="0.8"/>
           <text x="340" y="155" text-anchor="middle" font-family="IBM Plex Sans KR, sans-serif" font-size="12" fill="#4a463f" font-weight="500">중단 선반 / 행거 (용도에 따라 조절)</text>
 
-          <!-- 하부 서랍 -->
+          <!-- 하부: 3단서랍 × 2 + 아일랜드장 × 1 -->
           <rect x="50" y="190" width="193" height="70" fill="#d4cab8" stroke="#1c1a17" stroke-width="1"/>
-          <text x="146" y="230" text-anchor="middle" font-family="IBM Plex Sans KR, sans-serif" font-size="11" fill="#1c1a17" font-weight="600">서랍 1</text>
+          <text x="146" y="225" text-anchor="middle" font-family="IBM Plex Sans KR, sans-serif" font-size="10" fill="#1c1a17" font-weight="600">3단 서랍</text>
+          <text x="146" y="242" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#8a8478">129,000</text>
           <rect x="243" y="190" width="194" height="70" fill="#d4cab8" stroke="#1c1a17" stroke-width="1"/>
-          <text x="340" y="230" text-anchor="middle" font-family="IBM Plex Sans KR, sans-serif" font-size="11" fill="#1c1a17" font-weight="600">서랍 2</text>
-          <rect x="437" y="190" width="193" height="70" fill="#d4cab8" stroke="#1c1a17" stroke-width="1"/>
-          <text x="533" y="230" text-anchor="middle" font-family="IBM Plex Sans KR, sans-serif" font-size="11" fill="#1c1a17" font-weight="600">서랍 3</text>
+          <text x="340" y="225" text-anchor="middle" font-family="IBM Plex Sans KR, sans-serif" font-size="10" fill="#1c1a17" font-weight="600">3단 서랍</text>
+          <text x="340" y="242" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#8a8478">129,000</text>
+          <rect x="437" y="190" width="193" height="70" fill="#fde2c4" stroke="#c4541f" stroke-width="1.5"/>
+          <text x="533" y="225" text-anchor="middle" font-family="IBM Plex Sans KR, sans-serif" font-size="10" fill="#c4541f" font-weight="700">아일랜드장</text>
+          <text x="533" y="242" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#c4541f">189,000</text>
         </svg>
         <p style="font-size:0.85rem; color:var(--ink-mute); margin-top:8px; line-height:1.6;">
-          가장 긴 벽면. 서랍 3개를 하부에 균등 배치하고, 상부·중단은 선반 또는 행거로 구성 희망.<br>
+          가장 긴 벽면. 3단 서랍 2개 + 아일랜드장 1개를 하부에 배치, 상부·중단은 선반 또는 행거로 구성.<br>
           <strong>특이사항:</strong> 별도 매립 제품 없음.
         </p>
       </div>
