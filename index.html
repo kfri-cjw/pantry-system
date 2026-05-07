@@ -635,11 +635,16 @@
           <line x1="430" y1="42" x2="430" y2="58" stroke="#1c1a17" stroke-width="0.6"/>
           <text x="275" y="42" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="13" fill="#1c1a17" font-weight="500">2,200 mm</text>
 
-          <!-- Right: 2900 full (no door interference) -->
-          <line x1="465" y1="90" x2="465" y2="490" stroke="#1c1a17" stroke-width="0.6"/>
+          <!-- Right: 2900 split into 2000 (cabinet) + 900 (door swing) -->
+          <line x1="465" y1="90" x2="465" y2="365" stroke="#1c1a17" stroke-width="0.6"/>
           <line x1="457" y1="90" x2="473" y2="90" stroke="#1c1a17" stroke-width="0.6"/>
-          <line x1="457" y1="490" x2="473" y2="490" stroke="#1c1a17" stroke-width="0.6"/>
-          <text x="478" y="290" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="#c4541f" font-weight="500" transform="rotate(90 478 290)">2,900 mm</text>
+          <line x1="457" y1="365" x2="473" y2="365" stroke="#1c1a17" stroke-width="0.6"/>
+          <text x="478" y="227" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="#c4541f" font-weight="500" transform="rotate(90 478 227)">2,000 (시공)</text>
+
+          <line x1="465" y1="365" x2="465" y2="490" stroke="#8a8478" stroke-width="0.6" stroke-dasharray="3,3"/>
+          <line x1="457" y1="365" x2="473" y2="365" stroke="#8a8478" stroke-width="0.6"/>
+          <line x1="457" y1="490" x2="473" y2="490" stroke="#8a8478" stroke-width="0.6"/>
+          <text x="478" y="427" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#c95757" font-weight="500" transform="rotate(90 478 427)">900 (문 열림)</text>
 
           <!-- Bottom: 1300 (cabinet) + 900 (door) -->
           <line x1="120" y1="540" x2="305" y2="540" stroke="#1c1a17" stroke-width="0.6"/>
@@ -667,8 +672,9 @@
           <!-- West wall -->
           <rect x="120" y="90" width="50" height="400" fill="url(#hatch-wall)" stroke="#c4541f" stroke-width="1.2"/>
 
-          <!-- East wall - FULL 2900mm (no door interference) -->
-          <rect x="380" y="90" width="50" height="400" fill="url(#hatch-wall)" stroke="#c4541f" stroke-width="1.2"/>
+          <!-- East wall - SPLIT: top 2000mm cabinet, bottom 900mm EXCLUDED (door swing) -->
+          <rect x="380" y="90" width="50" height="275" fill="url(#hatch-wall)" stroke="#c4541f" stroke-width="1.2"/>
+          <rect x="380" y="365" width="50" height="125" fill="url(#excluded-pat)" stroke="#c95757" stroke-width="1" stroke-dasharray="3,2"/>
 
           <!-- South wall (excluding door area: left 1300mm only) -->
           <rect x="120" y="440" width="185" height="50" fill="url(#hatch-wall)" stroke="#c4541f" stroke-width="1.2"/>
@@ -695,7 +701,7 @@
           <!-- Wall labels -->
           <text x="275" y="120" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#c4541f" font-weight="500">N · 220 (상부장 관통)</text>
           <text x="145" y="290" font-family="JetBrains Mono, monospace" font-size="11" fill="#c4541f" font-weight="500" transform="rotate(-90 145 290)">W · 290</text>
-          <text x="405" y="290" font-family="JetBrains Mono, monospace" font-size="10" fill="#c4541f" font-weight="500" transform="rotate(90 405 290)">E · 290</text>
+          <text x="405" y="227" font-family="JetBrains Mono, monospace" font-size="10" fill="#c4541f" font-weight="500" transform="rotate(90 405 227)">E · 200</text>
           <text x="212" y="468" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#c4541f" font-weight="500">S · 130</text>
 
           <!-- N marker -->
@@ -735,7 +741,7 @@
           <div class="swatch excluded"></div>
           <div class="legend-text">
             <div class="name">시공 제외 영역</div>
-            <div class="desc">남쪽 벽 문 폭 900mm 제외</div>
+            <div class="desc">동쪽 벽 하부 900mm(문 열림 간섭) + 남쪽 벽 문 폭 900mm</div>
           </div>
         </li>
         <li>
@@ -803,16 +809,16 @@
           <td class="wall-name">통벽 (우측)</td>
           <td>East</td>
           <td class="num-cell-mute">2,900 mm</td>
-          <td class="num-cell-mute">—</td>
-          <td class="num-cell">2,900 mm</td>
-          <td>전체 사용 (문 간섭 없음)</td>
+          <td class="num-cell-mute">−900 mm</td>
+          <td class="num-cell">2,000 mm</td>
+          <td>문 열림 호 영역 제외</td>
         </tr>
         <tr>
           <td class="wall-name">총 합계</td>
           <td>—</td>
           <td class="num-cell-mute">10,200 mm</td>
-          <td class="num-cell-mute">−900 mm</td>
-          <td class="num-cell">9,300 mm</td>
+          <td class="num-cell-mute">−1,800 mm</td>
+          <td class="num-cell">8,400 mm</td>
           <td>견적 산정 기준</td>
         </tr>
       </tbody>
@@ -834,22 +840,22 @@
     <div class="calc-flow">
       <div class="calc-step">
         <div class="step-num">STEP 01</div>
-        <div class="step-formula">220 + 290 + 130 + 290</div>
+        <div class="step-formula">220 + 290 + 130 + 200</div>
         <div class="step-desc">4면 시공 길이 합산 (cm)</div>
       </div>
       <div class="calc-step">
         <div class="step-num">STEP 02</div>
-        <div class="step-formula">930 ÷ 10</div>
+        <div class="step-formula">840 ÷ 10</div>
         <div class="step-desc">10으로 나누기</div>
       </div>
       <div class="calc-step">
         <div class="step-num">STEP 03</div>
-        <div class="step-formula">93 → 반올림</div>
-        <div class="step-desc">정수값 유지</div>
+        <div class="step-formula">84 → 내림</div>
+        <div class="step-desc">십단위 이하 내림</div>
       </div>
       <div class="calc-result">
         <div class="label-final">QUOTE</div>
-        <div class="number">93</div>
+        <div class="number">84</div>
       </div>
     </div>
   </div>
@@ -870,7 +876,7 @@
       <div class="spec-card">
         <div class="num-tag">02</div>
         <div class="key">설치 형태</div>
-        <div class="val">4면 벽면 시공 — 남쪽 문 폭(900mm) 제외</div>
+        <div class="val">4면 벽면 시공 — 동쪽 하부(900mm, 문 열림) + 남쪽 문 폭(900mm) 제외</div>
       </div>
       <div class="spec-card has-status">
         <div class="num-tag">03</div>
@@ -916,7 +922,7 @@
 
     <div class="callout">
       <span class="icon">— 검토 사항 —</span>
-      <p><strong>문 열림 방향</strong>: 출입문이 안쪽으로 열릴 때 서쪽(왼쪽) 방향으로 열립니다. 따라서 동쪽 벽은 문 간섭 없이 전체 2,900mm 시공 가능하며, 남쪽 벽은 문 폭 900mm를 제외한 1,300mm만 시공합니다.</p>
+      <p><strong>문 열림 방향</strong>: 출입문이 안쪽 서쪽(왼쪽) 방향으로 열립니다. 문 열림 호가 동쪽 벽 하부 900mm 구간과 간섭하므로 해당 영역은 시공 제외합니다. 남쪽 벽은 문 폭 900mm를 제외한 1,300mm만 시공합니다.</p>
       <p><strong>창문 상부장 관통 시공</strong>: 창문 면적이 0.90×1.18m로 작지 않아 상부장 관통 시 채광·환기에 영향이 있습니다. 창문 부분은 슬라이딩 도어 또는 개방형 선반으로 처리하는 것을 권장합니다.</p>
       <p><strong>전열교환기 + 창문 근접</strong>: 두 요소가 모두 북쪽 천장 부근에 있어 상부장 마감이 가장 까다로운 면입니다. 시공업체에 도면 공유하고 매립형 vs 노출형 마감 방식 협의가 필수입니다.</p>
     </div>
@@ -1022,33 +1028,38 @@
         </p>
       </div>
 
-      <!-- 동쪽 벽 (East) - 전체 2900mm -->
+      <!-- 동쪽 벽 (East) - 시공 2000mm + 제외 900mm -->
       <div style="background:var(--bg-warm); padding:28px; border-left:3px solid var(--accent);">
         <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:16px;">
           <span style="font-family:'Fraunces',serif; font-size:1.1rem; font-weight:600;">East · 통벽 (우측)</span>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent);">시공 길이 2,900mm (전체)</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent);">시공 길이 2,000mm (하부 900mm 제외)</span>
         </div>
         <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" style="width:100%; background:#faf6ee; border:1px solid var(--rule);">
-          <rect x="50" y="30" width="580" height="230" fill="none" stroke="#1c1a17" stroke-width="1.5"/>
+          <rect x="50" y="30" width="400" height="230" fill="none" stroke="#1c1a17" stroke-width="1.5"/>
+          <!-- 제외 영역 -->
+          <rect x="450" y="30" width="180" height="230" fill="#fff0f0" stroke="#c95757" stroke-width="1" stroke-dasharray="4,3"/>
+          <text x="540" y="150" text-anchor="middle" font-family="IBM Plex Sans KR, sans-serif" font-size="11" fill="#c95757" font-weight="600">문 열림 간섭</text>
+          <text x="540" y="168" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#c95757">900mm 제외</text>
 
           <text x="25" y="145" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#8a8478" transform="rotate(-90 25 145)">H 2,300</text>
-          <text x="340" y="22" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#1c1a17" font-weight="500">2,900 mm</text>
+          <text x="250" y="22" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#1c1a17" font-weight="500">2,000 mm (시공)</text>
+          <text x="540" y="22" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#c95757">900 mm (제외)</text>
 
           <!-- 상부 선반 -->
-          <rect x="50" y="30" width="580" height="80" fill="#fde2c4" stroke="#c4541f" stroke-width="1"/>
-          <text x="340" y="75" text-anchor="middle" font-family="IBM Plex Sans KR, sans-serif" font-size="12" fill="#c4541f" font-weight="600">상부 선반 (조절형)</text>
+          <rect x="50" y="30" width="400" height="80" fill="#fde2c4" stroke="#c4541f" stroke-width="1"/>
+          <text x="250" y="75" text-anchor="middle" font-family="IBM Plex Sans KR, sans-serif" font-size="12" fill="#c4541f" font-weight="600">상부 선반 (조절형)</text>
 
           <!-- 중단 선반 -->
-          <rect x="50" y="110" width="580" height="80" fill="#e8e2d6" stroke="#b87333" stroke-width="0.8"/>
-          <text x="340" y="155" text-anchor="middle" font-family="IBM Plex Sans KR, sans-serif" font-size="12" fill="#4a463f" font-weight="500">중단 선반</text>
+          <rect x="50" y="110" width="400" height="80" fill="#e8e2d6" stroke="#b87333" stroke-width="0.8"/>
+          <text x="250" y="155" text-anchor="middle" font-family="IBM Plex Sans KR, sans-serif" font-size="12" fill="#4a463f" font-weight="500">중단 선반</text>
 
           <!-- 하부 선반 -->
-          <rect x="50" y="190" width="580" height="70" fill="#e8e2d6" stroke="#b87333" stroke-width="0.8"/>
-          <text x="340" y="230" text-anchor="middle" font-family="IBM Plex Sans KR, sans-serif" font-size="11" fill="#4a463f" font-weight="500">하부 선반</text>
+          <rect x="50" y="190" width="400" height="70" fill="#e8e2d6" stroke="#b87333" stroke-width="0.8"/>
+          <text x="250" y="230" text-anchor="middle" font-family="IBM Plex Sans KR, sans-serif" font-size="11" fill="#4a463f" font-weight="500">하부 선반</text>
         </svg>
         <p style="font-size:0.85rem; color:var(--ink-mute); margin-top:8px; line-height:1.6;">
-          문 열림이 서쪽 방향이라 동쪽 벽은 간섭 없이 전체 2,900mm 시공 가능. 전체 선반 구성.<br>
-          <strong>특이사항:</strong> 서쪽 벽과 동일 길이. 행거 또는 선반 자유 배치 가능.
+          문 열림 호가 하부 900mm와 간섭하여 제외, 상부 2,000mm만 시공. 전체 선반 구성.<br>
+          <strong>특이사항:</strong> 제외 영역은 빈 공간 또는 별도 슬림 수납장 활용 가능.
         </p>
       </div>
 
